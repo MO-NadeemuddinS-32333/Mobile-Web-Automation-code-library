@@ -11,15 +11,14 @@ import utils.Commons;
 
 public class AndroidAppLaunch {
 	// launching calculator app
-	// Note: An app can be launch via 2 methods Desired capablities &
-	// UIAutomator2Options
+	// Note: An app can be launch via 2 ways Desired capablities & UIAutomator2Options
+	// values are fetched from global properties file Commons class
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 
 		System.out.println("Initializing Android Appium....");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("platformName", "Android");
-		// values are fetched from global properties file
 		capabilities.setCapability("platformVersion", Commons.getGlobalPropertiesValue("androidVersion"));
 		capabilities.setCapability("deviceName", Commons.getGlobalPropertiesValue("androidDevice"));
 		capabilities.setCapability("udid", Commons.getGlobalPropertiesValue("androidUdid"));

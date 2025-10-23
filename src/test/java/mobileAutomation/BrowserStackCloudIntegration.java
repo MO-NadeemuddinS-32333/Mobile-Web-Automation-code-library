@@ -3,9 +3,7 @@ package mobileAutomation;
 import java.net.URL;
 import java.time.Duration;
 import java.util.HashMap;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
@@ -14,7 +12,12 @@ import utils.Commons;
 public class BrowserStackCloudIntegration {
 
 	public static void main(String[] args) throws Exception {
-		//child methods created for browser stack iOS and Android
+		// child methods created for browser stack iOS and Android
+		// launching calculator app
+		// Note: An app can be launch via 2 ways Desired capablities &
+		// UIAutomator2Options
+		// values are fetched from global properties file Commons class
+
 		initBrowserStackIos();
 		initBrowserStackandroid();
 	}

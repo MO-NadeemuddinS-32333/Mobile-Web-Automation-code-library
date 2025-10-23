@@ -12,6 +12,10 @@ import utils.Commons;
 public class IosAppLaunch {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
+		// launching calculator app
+		// Note: An app can be launch via 2 ways Desired capablities & UIAutomator2Options
+		// values are fetched from global properties file Commons class
+
 		System.out.println("Initializing iOS Appium...");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("platformName", "iOS");
